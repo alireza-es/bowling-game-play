@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Calulation of bowling game scores",
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf ./build && tsc",
     "test": "mocha -r ts-node/register tests/**/*.Spec.ts",
     "coverage": "nyc -r text -e .ts -x \"tests/*.Spec.ts\" npm run test"
   },
