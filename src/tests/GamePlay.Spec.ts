@@ -50,4 +50,20 @@ describe('GamePlay Tests', () => {
             expect(gamePlay.ScoreBoard.totalScore).equal(41);
         })
     })
+    describe('Reset the game', () => {
+        it('If reset the game, scoreboard should be reset', () => {
+            //arrange
+            let gamePlay = new GamePlay("John");
+            gamePlay.roll('7/');
+
+            //act
+            gamePlay.reset();
+
+            //check
+            expect(gamePlay.ScoreBoard.totalScore).equal(0);
+            expect(gamePlay.ScoreBoard.frames.length).equal(0);
+
+
+        })
+    })
 })
