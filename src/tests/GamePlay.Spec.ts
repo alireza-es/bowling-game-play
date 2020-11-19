@@ -49,6 +49,22 @@ describe('GamePlay Tests', () => {
             expect(gamePlay.ScoreBoard.frames.length).equal(10);
             expect(gamePlay.ScoreBoard.totalScore).equal(41);
         })
+        it('Roll the game with a spare frame', () => {
+            //arrange
+            var gamePlay = new GamePlay('John');
+
+            //act
+            gamePlay.roll('7/');
+            gamePlay.roll('13');
+
+            //check
+
+            expect(gamePlay.ScoreBoard.totalScore).equal(15);
+            expect(gamePlay.ScoreBoard.frames[0].score).equal(11);
+            expect(gamePlay.ScoreBoard.frames[0].totalScoreSoFar).equal(11);
+            expect(gamePlay.ScoreBoard.frames[1].score).equal(4);
+            expect(gamePlay.ScoreBoard.frames[1].totalScoreSoFar).equal(15);
+        })
     })
     describe('Reset the game', () => {
         it('If reset the game, scoreboard should be reset', () => {
