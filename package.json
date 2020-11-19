@@ -1,11 +1,11 @@
 {
   "name": "bowling-game-play",
   "version": "1.0.0",
-  "description": "Calulation of bowling game scores",
+  "description": "Calculation of bowling game scores",
   "scripts": {
     "build": "rimraf ./build && tsc",
-    "test": "mocha -r ts-node/register tests/**/*.Spec.ts",
-    "coverage": "nyc -r text -e .ts -x \"tests/*.Spec.ts\" npm run test"
+    "test": "mocha -r ts-node/register src/tests/**/*.Spec.ts",
+    "coverage": "nyc -r text -e .ts -x \"src/tests/**/*.Spec.ts\" npm run test"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",

@@ -1,6 +1,6 @@
 import { describe } from 'mocha';
 import { expect } from 'chai';
-import Frame from '../src/lib/Frame'
+import Frame from '../lib/Frame'
 
 describe('Frame Tests', () => {
     describe('Constructor', () => {
@@ -12,9 +12,9 @@ describe('Frame Tests', () => {
             let frame = new Frame(frameInput);
 
             //check
-            expect(frame).not.to.be.null;
-            expect(frame.frameInput).to.be.equal(frameInput);
-            expect(frame.totalScoreSoFar).to.be.equal(0);
+            expect(frame).not.null;
+            expect(frame.frameInput).equal(frameInput);
+            expect(frame.totalScoreSoFar).equal(0);
         })
     })
 })

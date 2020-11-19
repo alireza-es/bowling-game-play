@@ -1,6 +1,6 @@
 import { describe } from 'mocha';
 import { expect } from 'chai';
-import ScoreBoard from '../src/lib/ScoreBoard'
+import ScoreBoard from '../lib/ScoreBoard'
 
 describe('ScoreBoard Tests', () => {
     describe('Constructor', () => {
@@ -11,8 +11,8 @@ describe('ScoreBoard Tests', () => {
             let scoreBoard = new ScoreBoard();
 
             //check
-            expect(scoreBoard).not.to.be.null
-            expect(scoreBoard.frames.length).to.be.equal(0);
+            expect(scoreBoard).not.null
+            expect(scoreBoard.frames.length).equal(0);
         })
     })
 })
