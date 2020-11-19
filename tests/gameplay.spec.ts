@@ -1,8 +1,18 @@
 import { describe } from 'mocha';
 import { expect } from 'chai';
+import GamePlay from '../src/lib/GamePlay'
 
-describe("GamePlay", () => {
-    it("First test on mocha", () => {
-        expect(3).to.be.equal(2 + 1);
+describe('GamePlay', () => {
+    describe('Rolling the game', () => {
+        it('Roll once and check the score', () => {
+            //arrange
+            let gamePlay = new GamePlay('John');
+
+            //act
+            gamePlay.roll('5', '4');
+
+            //check
+            expect(gamePlay.getTotalScore()).to.be.equal(9);
+        })
     })
 })
