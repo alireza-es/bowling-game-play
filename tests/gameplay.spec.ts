@@ -9,7 +9,7 @@ describe('GamePlay', () => {
             let gamePlay = new GamePlay('John');
 
             //act
-            gamePlay.roll('5', '4');
+            gamePlay.roll('54');
 
             //check
             expect(gamePlay.getTotalScore()).to.be.equal(9);

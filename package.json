@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Calulation of bowling game scores",
   "scripts": {
-    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
-    "coverage": "nyc -r text -e .ts -x \"tests/*.spec.ts\" npm run test"
+    "test": "mocha -r ts-node/register tests/**/*.Spec.ts",
+    "coverage": "nyc -r text -e .ts -x \"tests/*.Spec.ts\" npm run test"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",

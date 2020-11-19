@@ -4,8 +4,9 @@ export default class GamePlay {
     constructor(player: string) {
         this.player = player;
     }
-    roll(pins1, pins2) {
-        this.totalScore = parseInt(pins1) + parseInt(pins2);
+    roll(frameInput: string) {
+
+        this.totalScore = parseInt(frameInput[0]) + parseInt(frameInput[1]);
     }
     getTotalScore() {
         return 9;
