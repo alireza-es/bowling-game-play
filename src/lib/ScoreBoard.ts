@@ -21,6 +21,10 @@ export default class ScoreBoard {
         if (shouldUpdateSpareFrame)
             this.updateSpareFrame();
 
+        let shouldUpdateStrikeFrame = (this.length > 1) && (this.beforeLastFrame?.isStrike);
+        if (shouldUpdateStrikeFrame)
+            this.updateStrikeFrame();
+
         this.lastFrame.totalScoreSoFar = this.totalScore + this.lastFrame.score;
         this.totalScore = this.lastFrame.totalScoreSoFar;
     }
@@ -29,6 +33,15 @@ export default class ScoreBoard {
             return;
 
         let addableScore = parseInt(this.lastFrame.frameInput[0]);
+        this.beforeLastFrame.score += addableScore;
+        this.beforeLastFrame.totalScoreSoFar += addableScore;
+        this.totalScore += addableScore;
+    }
+    private updateStrikeFrame() {
+        if (!this.beforeLastFrame)
+            return;
+
+        let addableScore = this.lastFrame.score;
         this.beforeLastFrame.score += addableScore;
         this.beforeLastFrame.totalScoreSoFar += addableScore;
         this.totalScore += addableScore;
